@@ -8,4 +8,11 @@ body {
     height: 100vh;
     margin: 0;
     flex-direction: column;
+    overscroll-behavior: none;
+    touch-action: none;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
 }

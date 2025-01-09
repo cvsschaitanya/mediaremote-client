@@ -1,9 +1,20 @@
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    height: 100%;
+}
+
 .text-title {
     font-size: calc(100vw / 10);
     font-weight: bold;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: center;
 }
 
 .controller {

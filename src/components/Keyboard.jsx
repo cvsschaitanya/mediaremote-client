@@ -15,8 +15,7 @@ export default function Keyboard({
             });
 
     return (
-        <>
-            {/* <div className='text-title'>Remote Controller</div> */}
+        <div className='keyboard'>
             <div className='text-title'>Remote Controller</div>
             <div className="controller">
                 <div className="arrows">
@@ -33,7 +32,7 @@ export default function Keyboard({
                 </div>
                 <button className="spacebar-button" onClick={sendRequest('/play_pause')}>␣</button>
             </div>
-        </>
+        </div>
     )
 };
 
