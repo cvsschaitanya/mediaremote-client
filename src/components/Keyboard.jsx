@@ -6,7 +6,7 @@ export default function Keyboard({
     server
 }) {
     const sendRequest = (endpoint) =>
-        () => axios.get(`${server}/${endpoint}`)
+        () => axios.get(`http://${server}/${endpoint}`)
             .then(() => {
                 console.log(`Request sent to ${endpoint}`);
             })
