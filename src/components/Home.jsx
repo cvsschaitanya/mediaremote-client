@@ -25,7 +25,9 @@ export default function Home({
                 </div>
             </div>
             <div className='panel'>
-                {mode === 'keyboard' ? <Keyboard server={`${config.server}/keyboard`} /> : <Mouse server={`${config.server}/mouse`} />}
+                {mode === 'keyboard' 
+                    ? <Keyboard server={`${config.server}/keyboard`} /> 
+                    : <Mouse server={`${config.server}/mouse`} />}
             </div>
         </div>
     );
