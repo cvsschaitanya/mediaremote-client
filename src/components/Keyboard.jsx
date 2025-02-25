@@ -20,17 +20,17 @@ export default function Keyboard({
             <div className="controller">
                 <div className="arrows">
                     <div className="arrow-buttons">
-                        <button className="arrow-button" onClick={sendRequest('/up')}>↑</button>
+                        <button className="arrow-button" onClick={sendRequest('up')}>↑</button>
                     </div>
                     <div className="arrow-buttons">
-                        <button className="arrow-button" onClick={sendRequest('/left')}>←</button>
-                        <button className="arrow-button" onClick={sendRequest('/right')}>→</button>
+                        <button className="arrow-button" onClick={sendRequest('left')}>←</button>
+                        <button className="arrow-button" onClick={sendRequest('right')}>→</button>
                     </div>
                     <div className="arrow-buttons">
-                        <button className="arrow-button" onClick={sendRequest('/down')}>↓</button>
+                        <button className="arrow-button" onClick={sendRequest('down')}>↓</button>
                     </div>
                 </div>
-                <button className="spacebar-button" onClick={sendRequest('/play_pause')}>␣</button>
+                <button className="spacebar-button" onClick={sendRequest('play_pause')}>␣</button>
             </div>
         </div>
     )
