@@ -11,14 +11,11 @@ on:
       - main
 
 jobs:
-  build:
+  build_and_upload:
     runs-on: ubuntu-latest
 
     permissions:
       contents: write  # Ensure the token has write permissions for contents
-
-
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.2.2

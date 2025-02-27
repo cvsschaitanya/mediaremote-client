@@ -30,7 +30,7 @@ export default function Keyboard({
                         <button className="arrow-button" onClick={sendRequest('down')}>↓</button>
                     </div>
                 </div>
-                <button className="spacebar-button" onClick={sendRequest('play_pause')}>␣</button>
+                <button className="spacebar-button" onClick={sendRequest('space')}>␣</button>
             </div>
         </div>
     )
