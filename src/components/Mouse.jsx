@@ -25,14 +25,19 @@ export default function Mouse({ server }) {
         if (lastTouch.current.x !== null && lastTouch.current.y !== null) {
             const dx = touch.clientX - lastTouch.current.x;
             const dy = touch.clientY - lastTouch.current.y;
-            socket.current.emit('mouse_move', { dx, dy });
+            socket.current.emit('mouse_action', { 
+                type: 'move',
+                args: [dx, dy, ]
+            });
         }
         lastTouch.current = { x: touch.clientX, y: touch.clientY };
     };
 
     return (
-        <div className='mouse' onTouchStart={onTouchStart} onTouchMove={onTouchMove}>
-        </div>
+        <div className='mouse' 
+            onTouchStart={onTouchStart} 
+            onTouchMove={onTouchMove}
+        />
     );
 }
 
