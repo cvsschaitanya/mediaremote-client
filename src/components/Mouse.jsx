@@ -27,16 +27,24 @@ export default function Mouse({ server }) {
             const dy = touch.clientY - lastTouch.current.y;
             socket.current.emit('mouse_action', { 
                 type: 'move',
-                args: [dx, dy, ]
+                args: [ 2 * dx, 2 * dy, ]
             });
         }
         lastTouch.current = { x: touch.clientX, y: touch.clientY };
+    };
+
+    const onClick = () => {
+        socket.current.emit('mouse_action', { 
+            type: 'single_click',
+            args: []
+        });
     };
 
     return (
         <div className='mouse' 
             onTouchStart={onTouchStart} 
             onTouchMove={onTouchMove}
+            onClick={onClick}
         />
     );
 }
