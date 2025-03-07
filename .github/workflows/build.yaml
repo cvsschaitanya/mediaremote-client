@@ -48,7 +48,8 @@ jobs:
   
       - name: Copy build artifact to releases branch
         run: |
-          mv build.zip build.$(date +%s).zip
+          cp build.zip build.$(date +%s).zip
+          mv build.zip build.latest.zip
   
       - name: Commit and push build artifact
         run: |
