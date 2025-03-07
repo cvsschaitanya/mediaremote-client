@@ -10,6 +10,9 @@ export default function Home({
 
     const [mode, setMode] = useState('keyboard');
 
+    // get the ip aggress/hostname of the url
+    const server = `${window.location.hostname}:${config.serverPort}`;
+
     const toggleMode = (newMode) => {
         setMode(newMode);
     };
@@ -26,8 +29,8 @@ export default function Home({
             </div>
             <div className='panel'>
                 {mode === 'keyboard' 
-                    ? <Keyboard server={`${config.server}/keyboard`} /> 
-                    : <Mouse server={`${config.server}/mouse`} />}
+                    ? <Keyboard server={`${server}/keyboard`} /> 
+                    : <Mouse server={`${server}/mouse`} />}
             </div>
         </div>
     );
@@ -36,7 +39,7 @@ export default function Home({
 
 Home.propTypes = {
     config: PropTypes.shape({
-        server: PropTypes.string.isRequired,
+        serverPort: PropTypes.number.isRequired,
     }).isRequired,
 };
 
